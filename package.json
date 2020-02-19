@@ -1,0 +1,23 @@
+{
+  "name": "coffee_chat",
+  "version": "1.0.0",
+  "description": "chat app",
+  "main": "app.js",
+  "dependencies": {
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorabelme/Coffee-Chat-with-Socket.io.git"
+  },
+  "author": "Dora Belme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorabelme/Coffee-Chat-with-Socket.io/issues"
+  },
+  "homepage": "https://github.com/dorabelme/Coffee-Chat-with-Socket.io#readme"
+}
