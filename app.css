@@ -78,6 +78,14 @@ h1 {
     font-weight: 300;
 }
 
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
 /* HEADER */
 header {
     height: 15rem;
@@ -98,6 +106,11 @@ header .container {
     background-color: var(--primary-green);
 }
 
+#mainContent {
+    justify-content: center;
+    width: 100%;
+}
+
 /* LOGIN FORM */
 
 #login {
@@ -105,6 +118,74 @@ header .container {
     padding: 4rem 10rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     margin-top: -10rem;
-
 }
+
+#loginForm {
+    margin-top: 2rem;
+}
+
+/* FORM ELEMENTS */
+input {
+    height: 4rem;
+    padding: 1rem;
+    background-color: var(--light-green);
+    border: none;
+    color: var var(--secondary-text);
+}
+
+input::placeholder {
+    font-size: 1.3rem;
+}
+
+button {
+    height: 4rem;
+    padding: 0 1.5rem;
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* CHAT */
+#chat {
+    background-color: white;
+    margin: 2.5rem 0;
+    padding: 2.5rem;
+    color: white;
+    overflow-y: scroll;
+}
+
+.message {
+    background-color: var(--primary-green);
+    padding: 2rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.message-right {
+    background-color: var(--light-green );
+    color: var(--dark-green);
+    margin-left: 20%;  
+}
+
+#message-details {
+    margin-bottom: 0.5re;
+    justify-content: space-between;
+}
+
+.message-author {
+    font-weight: 800;
+}
+
+.message-date {
+    font-weight: 100;
+    font-size: 1.4rem;
+}
+
+.message-content {
+    font-weight: 100;
+}
+
+
+
 
