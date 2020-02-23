@@ -7,22 +7,51 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Coffee Chat</h1>
-            <p>The easiest way to get your message across.</p>
+    <div id="appContainer" class="flex-column">
+        <header>
+            <div class="container flex-column">
+                <h1>Coffee Chat</h1>
+                <p class="light-text">The easiest way to get your message across.</p>
+            </div>
+        </header>
+
+        <div id="mainContent" class="container flex-grow-1 flex-column flex-center">
+            <section id="login">
+                <h2 class="text-center">Get Started!</h2>
+                <form id="loginForm" class="flex">
+                    <input type="text" name="username" id="usernameInput" placeholder="username" class="flex-grow-1">
+                    <button id="loginBtn">Chat!</button>
+                </form>
+            </section>
+
+            <section id="chat" class="hidden">
+                <div id="messagesList">
+                    <div class="message message-left">
+                        <div class="message-details">
+                            <p class="message-author">Dora Belme</p>
+                            <p class="message-date">2/23/2020</p>
+                        </div>
+                        <p class="message-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur rem sapiente a perspiciatis asperiores!</p>
+                    </div>
+
+                    <div class="message message-right">
+                        <div class="message-details">
+                            <p class="message-author"></p>
+                            <p class="message-date">2/23/2020</p>
+                        </div>
+                        <p class="message-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur rem sapiente a perspiciatis asperiores!</p>
+                    </div>
+
+                    <p class="secondary-text text-center">Dora Belme has joined the chat...</p>
+                </div>
+
+                <form id="messageForm" class="flex">
+                    <input type="text" name="message" class="flex-grow-1" id="messageInput" placeholder="enter a message">
+                    <button id="loginBtn"></button>
+                </form>
+
+            </section> 
         </div>
-    </header>
-    <div id="mainContent">
-        <section id="login">
-            <h2>Get Started!</h2>
-            <form id="loginForm"></form>
-        </section>
-        <section id="chat"><div id="messagesList">
-            <div class="message message-right"></div>
-            <div class="message message-left"></div>
-        <form id="messageForm"></form>
-        </section>
     </div>
     <script src="app.js"></script>
 </body>

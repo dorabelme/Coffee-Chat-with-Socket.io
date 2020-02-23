@@ -39,7 +39,7 @@ body {
     flex-direction: column;
 }
 
-.flex-groqw-1 {
+.flex-grow-1 {
     flex-grow: 1;
 }
 
@@ -49,6 +49,11 @@ body {
 
 .mb-2 {
     margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
 }
 
 /* TEXT CLASSES */
@@ -71,5 +76,35 @@ body {
 h1 {
     font-size: 4.8rem;
     font-weight: 300;
+}
+
+/* HEADER */
+header {
+    height: 15rem;
+    background-color: var(--dark-green);
+    color: white;
+    width: 100%;
+}
+
+header .container {
+    height: 100%;
+    align-items: left;
+    justify-content: center;
+}
+
+#appContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-green);
+}
+
+/* LOGIN FORM */
+
+#login {
+    background: white;
+    padding: 4rem 10rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-top: -10rem;
+
 }
 
