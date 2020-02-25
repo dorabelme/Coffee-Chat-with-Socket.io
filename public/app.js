@@ -14,6 +14,24 @@ const loginWindow = document.getElementById('login');
 
 const messages = []; // {author, date, content, type}
 
+var socket = io();
+socket.on('message', message => {
+    console.log(message);
+    if (message.type !== messageTypes.LOGIN) {
+        if (message.author === username) {
+            message.type = messageTypes.RIGHT;
+        }
+        else {
+            message.type = messageTypes.LEFT;
+        }
+    }
+
+    messages.push(message);
+    displayMessages();
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+
+})
+
 // take in message object, and return corresponding message HTML
 const createMessageHTML = message => {
     if (message.type === messageTypes.LOGIN) {
@@ -55,19 +73,30 @@ sendBtn.addEventListener('click', e => {
         return console.log('must supply a username');
     }
 
+    const date = new Date();
+    const day = date.getDate();
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const dateString = `${month}/${day}/${year}`;
+    
     const message = {
         author: username,
-        date: new Date(),
+        date: dateString,
         content: messageInput.value,
-        type: messageTypes.RIGHT,
     };
 
-    messages.push(message);
-    displayMessages();
+    
+    sendMessage(message);
+    // messages.push(message);
+    // displayMessages();
 
     messageInput.value = '';
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+    // chatWindow.scrollTop = chatWindow.scrollHeight;
 });
+
+const sendMessage = message => {
+    socket.emit('message', message);
+}
 
 // loginBtn callback
 loginBtn.addEventListener('click', e => {
@@ -80,7 +109,7 @@ loginBtn.addEventListener('click', e => {
     }
     username = usernameInput.value;
 
-    messages.push({
+    sendMessage({
         author: username,
         type: messageTypes.LOGIN,
     });
@@ -88,7 +117,4 @@ loginBtn.addEventListener('click', e => {
     // hide login and show chat window
     loginWindow.classList.add('hidden');
     chatWindow.classList.remove('hidden');
-
-    // display those messages
-    displayMessages();
 });

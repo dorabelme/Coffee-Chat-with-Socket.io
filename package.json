@@ -1,12 +1,16 @@
 {
   "name": "coffee_chat",
   "version": "1.0.0",
-  "description": "chat app",
+  "description": "This is a chat application built with html, css, js, and socket.io",
   "main": "app.js",
   "dependencies": {
-    "prettier": "^1.19.1"
+    "express": "^4.17.1",
+    "prettier": "^1.19.1",
+    "socket.io": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "scripts": {
     "test": "test"
   },
