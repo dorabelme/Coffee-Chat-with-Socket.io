@@ -4,17 +4,17 @@
 
 Coffee Chat is a chat application built with Socket.io, HTML5, CSS3, and JavaScript. Features used are Flexbox, CSS Variables, ES6 Arrow Functions, ES6 Map, Let and Const variables, Node.js, Express.js, and Socket.io.
 
-- [Deployed front-end](https://coffee-chat-app.herokuapp.com/)
+-   [Deployed front-end](https://coffee-chat-app.herokuapp.com/)
 
 ## Short demo:
 
 <p align ="center">
-<img src="./coffee-chat.gif" alt="chat demo">
+<img src="./coffeeChat.gif" alt="chat demo">
 </p>
 
 ## Tech Stack
 
-- Socket.io
-- HTML5
-- CSS3
-- JavaScript
+-   Socket.io
+-   HTML5
+-   CSS3
+-   JavaScript
